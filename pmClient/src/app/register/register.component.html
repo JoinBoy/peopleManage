@@ -1,0 +1,27 @@
+<div id='place'>
+	<div class="layui-card layui-main center login layui-bg-orange layui-anim layui-anim-fadein">
+		<div class="layui-card-header">
+			<h3 class="">系统登录</h3>
+		</div>
+		<div class="layui-card-body ">
+			<form class="layui-form ">
+				<div class="layui-form-item">
+					<label class="layui-form-label">用户名：</label>
+					<div class="layui-input-block">
+						<input class="layui-input" [(ngModel)]="userName"  name="userName" type="text" placeholder="请输入用户名"/>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">密码：</label>
+					<div class="layui-input-block">
+						<input class="layui-input" type="password"  name="passWord" [(ngModel)]="passWord" placeholder="请输入密码"/>
+					</div>
+				</div>
+			</form>
+			<button class="layui-btn layui-btn-fluid layui-btn-radius" (click)="login()">登录</button>
+		</div>
+	</div>
+</div>
+
+
+
