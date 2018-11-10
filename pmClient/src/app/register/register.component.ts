@@ -11,7 +11,7 @@ export class RegisterComponent {
 	userName="";
 	passWord="";
   constructor(
-  	private registerService : RegisterService
+	private registerService : RegisterService
   ) { }
 
   ngOnInit(){
@@ -28,20 +28,18 @@ export class RegisterComponent {
 		place.setAttribute("style","height:"+height+"px");
   };
   login():void{
-  	console.log(this)
-  	console.log(this.userName)
-  	console.log(this.passWord)
-  	this.registerService.getHeroes().subscribe(
-            val => {
-                console.log("PUT call successful  returned in body", 
-                  val);
+		this.registerService.getHeroes(this.userName,this.passWord).subscribe(
+            res => {
+//              if(res.code == 1){
+                	window.location.href = '/home'
+                	console.log("登陆成功")
+//              }else{
+//              	alert("用户名或密码错误!")
+//              }
             },
             response => {
-                console.log("PUT call in error", response);
+                alert('请求失败请重新登录')
             },
-            () => {
-                console.log("The PUT observable is now completed.");
-            }
-        );
+         );
   }
 }

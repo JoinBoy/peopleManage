@@ -1,13 +1,20 @@
 var dbPool= require("../mysql/mysql.js");
-var aaa = function(req, res, next) {
-	console.log(req.query.name)
-	console.log(req.query.password)
+var session = require("express-session");
+var cookie = require('cookie-parser');
+var login = function(req, res, next) {
+	var json = null;
 	dbPool.getConnection((err,connection)=>{
-		connection.query('SELECT * FROM user',function(err,rows,field){
+		connection.query('SELECT * FROM user where USERNAME = ? and PASSWORD = ?',[req.query.userName,req.query.passWord],function(err,rows,field){
 			if(err) throw err;
-			res.json(rows);
+			if(rows.length>0){
+				json = {code:1,message:"success"};
+				res.cookie('userName',req.query.userName,{maxAge:1000*60*60*24*7})
+			}else{
+				json = {code:0,message:"fail"};
+			}
+			res.json(json);
 		})
 		connection.release();
 	})
 }
-module.exports = aaa;
+module.exports = login;

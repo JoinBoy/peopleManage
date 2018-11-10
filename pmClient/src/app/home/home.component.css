@@ -1,0 +1,11 @@
+.home_title{
+	line-height: 60px;
+	margin-left: 40px;
+	font-size: 24px;
+	float: left;
+}
+.left_nav{
+	width: 200px;
+	display: inline-block;
+	height:100%;
+}
