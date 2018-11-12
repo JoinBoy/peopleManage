@@ -9,3 +9,14 @@
 	display: inline-block;
 	height:100%;
 }
+.main_title{
+	height:45px;
+	line-height: 45px;
+	margin-left: 20px;
+}
+#place{
+	min-width: 1200px;
+}
+.main-place{
+	width: calc(100% - 200px);
+}

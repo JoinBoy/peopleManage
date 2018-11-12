@@ -30,12 +30,12 @@ export class RegisterComponent {
   login():void{
 		this.registerService.getHeroes(this.userName,this.passWord).subscribe(
             res => {
-//              if(res.code == 1){
+                if(res.code == 1){
                 	window.location.href = '/home'
                 	console.log("登陆成功")
-//              }else{
-//              	alert("用户名或密码错误!")
-//              }
+                }else{
+                	alert("用户名或密码错误!")
+                }
             },
             response => {
                 alert('请求失败请重新登录')

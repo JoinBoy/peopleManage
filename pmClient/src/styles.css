@@ -16,4 +16,10 @@ html,body{
 	width:100%;
 	position:relative;
 }
+.leftFloat{
+	float:left;
+}
+.rightFloat{
+	float:right;
+}
 

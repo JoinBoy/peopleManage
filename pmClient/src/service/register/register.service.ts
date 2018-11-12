@@ -19,12 +19,12 @@ constructor(
 	private http: HttpClient,
 ) { }
 
-		getHeroes (userName:string,passWord:string): Observable<Object> {
-			return null;
-//	    return this.http.get(this.heroesUrl+'?userName='+userName+'&passWord='+passWord)
-//	      .pipe(
-////	        tap(heroes => this.log('fetched heroes')),
-////	        catchError(this.handleError('getHeroes', []))
-//	      );
+		getHeroes (userName:string,passWord:string): Observable<any> {
+//			return null;
+	    return this.http.get(this.heroesUrl+'?userName='+userName+'&passWord='+passWord)
+	      .pipe(
+//	        tap(heroes => this.log('fetched heroes')),
+//	        catchError(this.handleError('getHeroes', []))
+	      );
 	  }
 }
