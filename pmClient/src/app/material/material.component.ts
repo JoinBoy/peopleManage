@@ -18,19 +18,26 @@ ngOnInit() {
 	    	var table = layui.table;
 			  table.render({
 			    elem: '#demo',
-			    height: 312,
-			    url: 'https://www.layui.com/demo/table/user',
+			    height: 480,
+			    url: 'http://localhost:3000/material/getList',
 			    page: true,
 			    cols: [[
-			      {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'},
-			      {field: 'username', title: '用户名', width:80},
-			      {field: 'sex', title: '性别', width:80, sort: true},
-			      {field: 'city', title: '城市', width:80},
-			      {field: 'sign', title: '签名', width: 177},
-			      {field: 'experience', title: '积分', width: 80, sort: true},
-			      {field: 'score', title: '评分', width: 80, sort: true},
-			      {field: 'classify', title: '职业', width: 80},
-			      {field: 'wealth', title: '财富', width: 135, sort: true}
+			      {field: '', title: '', width:60, sort: true, fixed: 'left',type:'checkbox'},
+			      {field: 'id', title: 'ID', width:120, sort: true,fixed: 'left'},
+			      {field: 'name', title: '用户名', width:120,fixed: 'left'},
+			      {field: 'workID', title: '工号', width:120},
+			      {field: 'gender', title: '性别', width:120 ,sort: true},
+			      {field: 'birthday', title: '出生日期', width:120},
+			      {field: 'idCard', title: '身份证号', width:120},
+			      {field: 'wedlock', title: '婚姻状况', width:120},
+			      {field: 'nativePlace', title: '籍贯', width:120},
+			      {field: 'email', title: '电子邮件', width:220},
+			      {field: 'phone', title: '电话号码', width:120},
+			      {field: 'address', title: '联系地址', width:120},
+			      {field: 'tiptopDegree', title: '最高学历', width:120},
+			      {field: 'engageForm', title: '聘用形式', width:120},
+			      {field: 'school', title: '学校', width:120},
+			      {field: 'specialty', title: '专业', width:120},
 			    ]]
 			  });
 			  

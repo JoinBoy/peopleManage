@@ -30,7 +30,7 @@ export class RegisterComponent {
   login():void{
 		this.registerService.getHeroes(this.userName,this.passWord).subscribe(
             res => {
-                if(res.code == 1){
+                if(res.code == 0){
                 	window.location.href = '/home'
                 	console.log("登陆成功")
                 }else{

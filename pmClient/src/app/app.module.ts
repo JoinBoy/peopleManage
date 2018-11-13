@@ -13,13 +13,13 @@ import { MaterialComponent } from './material/material.component';
     AppComponent,
     RegisterComponent,
     HomeComponent,
-    MaterialComponent,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
