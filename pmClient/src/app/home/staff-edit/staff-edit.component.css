@@ -1,0 +1,17 @@
+.editModel{
+    height:100%;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:rgba(99,99,99,0.5);
+}
+.formMargin{
+    margin-top: 20px;
+    margin-right: 40px;
+}
+.leftBtn{
+    float: right;
+    margin-top: 170px;
+    margin-right: 50px;
+}

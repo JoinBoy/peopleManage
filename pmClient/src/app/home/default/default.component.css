@@ -1,0 +1,11 @@
+.backgroundBody{
+    margin-left:20px;
+}
+.welcomeBody{
+    height:400px;
+    width:100%;
+    line-height:400px;
+    text-align: center;
+    font-size: 40px;
+    color:#E31D1A;
+}

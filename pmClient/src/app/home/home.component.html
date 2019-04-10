@@ -40,14 +40,17 @@
 		  <li class="layui-nav-item"><a href="">社区</a></li>
 		</ul>
 	</div>
+	<!-- 中间区域 -->
 	<div class="leftFloat main-place">
 		<div class="main_title">
-			<span>默认展开</span>
+			<span >{{totalTitle}}</span>
 			<span>></span>
-			<span>选项一</span>
+			<span>{{fatherTitle}}</span>
 		</div>
+		<!-- 中间区域路由变化 -->
 		<div>
 			<router-outlet></router-outlet>
 		</div>
+		
 	</div>
 </div>

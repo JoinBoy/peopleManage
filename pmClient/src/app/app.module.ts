@@ -7,13 +7,19 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { MaterialComponent } from './material/material.component';
+import { DefaultComponent } from './home/default/default.component';
+import { StaffEditComponent } from './home/staff-edit/staff-edit.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     HomeComponent,
-    MaterialComponent
+    MaterialComponent,
+    DefaultComponent,
+    StaffEditComponent,
+
   ],
   imports: [
     BrowserModule,

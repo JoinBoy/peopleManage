@@ -1,0 +1,269 @@
+<div>
+  <div class="editModel" [hidden] = "showEdit" class="layui-anim layui-anim-fadein">
+    <form action="" class="layui-form formMargin">
+      <!-- 第一行 -->
+      <div class="layui-row">
+        <!-- 输入姓名 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label class="layui-form-label">姓名</label>
+            <div class="layui-input-block">
+              <input type="text" name="title" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+        </div>
+        <!-- 选择性别 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label class="layui-form-label">性别</label>
+            <div class="layui-input-block">
+              <input type="radio" name="sex"   value="男" title="男"  checked>
+              <input type="radio" name="sex"   value="女" title="女">
+            </div>
+          </div>
+        </div>
+        <!-- 出生日期 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label class="layui-form-label">出生日期</label>
+            <div class="layui-input-block">
+              <input type="text" id="datainput" class="layui-input dateInput" placeholder="请选择出生日期" >
+            </div>
+          </div>
+        </div>
+        <!-- 政治面貌 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">政治面貌</label>
+            <div class="layui-input-block">
+              <select name="" id="" lay-verify="required">
+                <option value=""></option>
+                <option value="0">党员</option>
+                <option value="1">团员</option>
+                <option value="2">群众</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第二行 -->
+      <div class="layui-row">
+        <!-- 民族 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">民族</label>
+            <div class="layui-input-block">
+              <select name="" id="" lay-verify="required">
+                <option value=""></option>
+                <option value="0">汉族</option>
+                <option value="1">苗族</option>
+                <option value="2">回族</option>
+                <option value="3">维吾尔族</option>
+                <option value="4">蒙古族</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- 籍贯 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">籍贯</label>
+            <div class="layui-input-block">
+              <input type="text" placeholder="请输入籍贯" class="layui-input">
+            </div>
+          </div>
+        </div>
+        <!-- 电子邮箱 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">电子邮箱</label>
+            <div class="layui-input-block">
+              <input type="text" placeholder="请输入电子邮箱" class="layui-input">
+            </div>
+          </div>
+        </div>
+        <!-- 联系地址 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">联系地址</label>
+            <div class="layui-input-block">
+              <input type="text" placeholder="请输入联系地址" class="layui-input"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第三行 -->
+      <div class="layui-row">
+        <!-- 职位 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">职位</label>
+            <div class="layui-input-block">
+              <select name="" id="" lay-verify="required">
+                <option value=""></option>
+                <option value="0">技术总监</option>
+                <option value="1">研发总监</option>
+                <option value="2">市场总监</option>
+                <option value="3">总经理</option>
+                <option value="4">董事长</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- 职称 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">职称</label>
+            <div class="layui-input-block">
+              <select name="" id="" lay-verify='required'>
+                <option value=""></option>
+                <option value="0">教授</option>
+                <option value="1">副教授</option>
+                <option value="2">讲师</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- 所属部门 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">所属部门</label>
+            <div class="layui-input-block">
+              <input type="text" placeholder="请填写所属部门" class="layui-input"/>
+            </div>
+          </div>
+        </div>
+        <!-- 电话号码 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">电话号码</label>
+            <div class="layui-input-block">
+              <input type="tel" placeholder="请填写电话号码" class="layui-input"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第四行 -->
+      <div class="layui-row">
+        <!-- 工号 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">工号</label>
+            <div class="layui-input-block">
+              <input type="text" placeholder="请填写工号" class="layui-input" disabled="disabled"/>
+            </div>
+          </div>
+        </div>
+        <!-- 学历 -->
+        <div class="layui-col-xs3">
+          <label for="" class="layui-form-label">学历</label>
+          <div class="layui-input-block">
+            <select name="" id="" lay-verify>
+              <option value=""></option>
+              <option value="0">博士</option>
+              <option value="1">硕士</option>
+              <option value="2">本科</option>
+              <option value="3">大专</option>
+              <option value="4">高中</option>
+              <option value="5">其他</option>
+            </select>
+          </div>
+        </div>
+        <!-- 毕业学校 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">毕业学校</label>
+            <div class="layui-input-block">
+              <input type="text" placeholder="请输入毕业学校" class="layui-input"/>
+            </div>
+          </div>
+        </div>
+        <!-- 专业名称 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">专业名称</label>
+            <div class="layui-input-block">
+              <input type="text" placeholder="请输入专业名称" class="layui-input"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第五行 -->
+      <div class="layui-row">
+        <!-- 入职日期 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">入职日期</label>
+            <div class="layui-input-block">
+              <input type="text" id="dateinput" placeholder="请选择入职日期" class="layui-input dateInput"/>
+            </div>
+          </div>
+        </div>
+        <!-- 转正日期 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">转正日期</label>
+            <div class="layui-input-block">
+              <input type="text" class="layui-input dateInput" placeholder="请选择转正日期">
+            </div>
+          </div>
+        </div>
+        <!-- 合同起始日期 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">合同日期</label>
+            <div class="layui-input-block">
+              <input type="text" class="layui-input dateInput" placeholder="请选择合同起始日期">
+            </div>
+          </div>
+        </div>
+          <!-- 合同结束日期 -->
+        <div class="layui-col-xs3">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">合同日期</label>
+            <div class="layui-input-block">
+              <input type="text" class="layui-input dateInput" placeholder="请选择合同结束日期">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第六行 -->
+      <div class="layui-row">
+        <!-- 身份证号 -->
+        <div class="layui-col-xs4">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">身份证号</label>
+            <div class="layui-input-block">
+              <input type="text" class="layui-input" placeholder="请填写身份证号">
+            </div>
+          </div>
+        </div>
+        <!-- 聘用形式 -->
+        <div class="layui-col-xs4">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">聘用形式</label>
+            <div class="layui-input-block">
+              <input type="radio" name="type" value="劳动合同" title="劳动合同" checked>
+              <input type="radio" name="type" value="劳务合同" title="劳务合同">
+            </div>
+          </div>
+        </div>
+        <!-- 婚姻状况 -->
+        <div class="layui-col-xs4">
+          <div class="layui-form-item">
+            <label for="" class="layui-form-label">婚姻状况</label>
+            <div class="layui-input-block">
+              <input type="radio" name="wife" value="已婚" title="已婚" checked>
+              <input type="radio" name="wife" value="未婚" title="未婚">
+              <input type="radio" name="wife" value="离异" title="离异">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <button class="layui-btn layui-btn-primary leftBtn" id="close" (click)="closeClick()">取消</button>
+    <button class="layui-btn layui-btn-normal leftBtn" id="sure" (click)="sureClick()">确定</button>
+  </div>
+
+</div>
+

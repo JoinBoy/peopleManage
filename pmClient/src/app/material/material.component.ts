@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {materialGetList} from '../../utils/utils';
 
 @Component({
 selector: 'app-material',
@@ -18,8 +19,8 @@ ngOnInit() {
 	    	var table = layui.table;
 			  table.render({
 			    elem: '#demo',
-			    height: 480,
-			    url: 'http://localhost:3000/material/getList',
+			    height: 500,
+			    url: materialGetList,
 			    page: true,
 			    cols: [[
 			      {field: '', title: '', width:60, sort: true, fixed: 'left',type:'checkbox'},
@@ -38,9 +39,12 @@ ngOnInit() {
 			      {field: 'engageForm', title: '聘用形式', width:120},
 			      {field: 'school', title: '学校', width:120},
 			      {field: 'specialty', title: '专业', width:120},
+			      {field:'',title:"操作",width:128,fixed:'right',toolbar:'<div class="layui-btn-group"><button class="layui-btn layui-btn-sm">编辑</button>'
+			      +'<button class="layui-btn layui-btn-sm layui-btn-danger">删除</button></div>'}
 			    ]]
 			  });
 			  
 			});
 	}
 }
+
