@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { MaterialComponent } from './material/material.component';
 import { DefaultComponent } from './home/default/default.component';
 import { StaffEditComponent } from './home/staff-edit/staff-edit.component';
+import { MaterialService } from '../service/material/material.service';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { StaffEditComponent } from './home/staff-edit/staff-edit.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MaterialService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

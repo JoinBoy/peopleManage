@@ -6,13 +6,15 @@ import {StaffEditComponent} from './staff-edit/staff-edit.component';
 @Component({
   selector: 'app-home',
 	templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+	styleUrls: ['./home.component.css'],
+	providers:[]
 })
 export class HomeComponent implements OnInit {
 
 	public totalTitle:String = "首页"; //home页上方一级标题
 	public fatherTitle:String = "欢迎页面"; // home页上方耳机标题
-	public showEdit:boolean = false; //显示隐藏编辑按钮标志位
+	public showEdit:boolean = true; //显示隐藏编辑按钮标志位
+	public editPageIndex:number; //编辑弹窗index
 	
 @ViewChild(StaffEditComponent) staffEditComponent: StaffEditComponent;
   constructor() {
@@ -33,7 +35,7 @@ export class HomeComponent implements OnInit {
   	fromEvent(window,'resize')
 			.subscribe(() => this.getClientHeight());
 		this.getClientHeight();
-		this.layuiOpen();
+		// this.layuiOpen();
 	}
 	/**
 	 * 初始化绑定layui
@@ -51,24 +53,5 @@ export class HomeComponent implements OnInit {
 		var place = document.getElementById("place");
 		place.setAttribute("style","height:"+height+"px");
 	};
-	/**
-	 * 调用layui弹出层
-	 */
-	layuiOpen = ():void => {
-		layui.use('layer',function(){
-			var layer = layui.layer;
-			layer.open({
-				anim: 0,
-				type:2,
-				title:'编辑',
-				closeBtn :2,
-				content:['staffEdit'],
-				area:['1200px','600px'],
-				resize:false,
-				success:(layero,index)=>{
-					// layer.close(1)
-				}
-			})
-		})
-	}
+	
 }

@@ -10,12 +10,12 @@
 		<button class="layui-btn layui-bg-blue rightFloat">
 			<i class="layui-icon">&#xe681;</i>导入数据
 		</button>
-		<button class="layui-btn layui-bg-blue rightFloat">
+		<button class="layui-btn layui-bg-blue rightFloat" (click)=layuiOpen()>
 			<i class="layui-icon">&#xe601;</i>导出数据
 		</button>
 	</div>
 	<div class="table">
 		<table id="demo" lay-filter="test" ></table>
 	</div>
-	
+	<app-staff-edit #ad style='display:none' ></app-staff-edit>
 </div>

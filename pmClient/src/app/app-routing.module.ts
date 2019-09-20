@@ -12,12 +12,10 @@ const routes: Routes = [
 		 children: [
 				 {path:'material',component:MaterialComponent},
 				 {path:'default',component:DefaultComponent},
-				 
-				 {path:'**', redirectTo:'default',pathMatch:'full'}
 	    ]
 	},
-	{path:'staffEdit',component:StaffEditComponent},//编辑员工
-	{ path: '**', redirectTo: 'register', pathMatch: 'full' }//匹配不上默认跳转路由
+	{path:'staffEdit',component:StaffEditComponent, pathMatch: 'full'},//编辑员工
+	{ path: '**', redirectTo: 'register', pathMatch: 'full'}//匹配不上默认跳转路由
 ];
 
 @NgModule({
