@@ -4,6 +4,7 @@ var dbPool = mysql.createPool({
 	host:'127.0.0.1',
 	user:'root',
 	password:'000000',
-	database:'myproject'
+	database:'myproject',
+	timezone:"08:00"
 });
 module.exports = dbPool;

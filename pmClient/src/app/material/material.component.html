@@ -4,18 +4,20 @@
 		<button class="layui-btn layui-bg-blue">
 			<i class="layui-icon">&#xe615;</i>搜索
 		</button>
-		<button class="layui-btn layui-bg-orange rightFloat">
+		<button class="layui-btn layui-bg-orange rightFloat" (click)='addEmployee()'>
 			<i class="layui-icon">&#xe654;</i>添加员工
 		</button>
 		<button class="layui-btn layui-bg-blue rightFloat">
 			<i class="layui-icon">&#xe681;</i>导入数据
 		</button>
-		<button class="layui-btn layui-bg-blue rightFloat" (click)=layuiOpen()>
+		<a class="layui-btn layui-bg-blue rightFloat" [href]="myUrl+'/downExcel'" alt=''>
 			<i class="layui-icon">&#xe601;</i>导出数据
-		</button>
+		</a>
+	
 	</div>
 	<div class="table">
 		<table id="demo" lay-filter="test" ></table>
 	</div>
 	<app-staff-edit #ad style='display:none' ></app-staff-edit>
+	
 </div>

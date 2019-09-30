@@ -2,6 +2,7 @@ import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
 import {materialGetList} from '../../utils/utils';
 import {StaffEditComponent} from '../home/staff-edit/staff-edit.component';
 import { MaterialService } from '../../service/material/material.service';
+import { myUrl } from "../../utils/utils";
 import * as $ from 'jquery';
 
 @Component({
@@ -17,6 +18,7 @@ export class MaterialComponent implements OnInit {
 
 	public editPageIndex:number;  //编辑弹窗层数
 	public rowData:object = {};
+	public myUrl:string = myUrl;
 
 	//获得子组件
 	@ViewChild(StaffEditComponent) StaffEditComponent:StaffEditComponent;
@@ -66,15 +68,8 @@ export class MaterialComponent implements OnInit {
 				var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
 				var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
 				
-				if(layEvent === 'detail'){ //查看
-					//do somehing
-				} else if(layEvent === 'del'){ //删除
-					console.log(2222)
-					// layer.confirm('真的删除行么', function(index){
-					// obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
-					// layer.close(index);
-					// //向服务端发送删除指令
-					// });
+				if(layEvent === 'del'){ //删除
+					
 				} else if(layEvent === 'edit'){ //编辑
 					//把点击这一行的数据通过emitRowData()方法发送出去
 					that.MaterialService.emitRowData(data);
@@ -120,6 +115,15 @@ export class MaterialComponent implements OnInit {
 				  }    
 			})
 		})
+	}
+	/**
+	 * 添加员工
+	 */
+	addEmployee = ():void =>{
+		//传入空值
+		this.MaterialService.emitRowData({});
+		//显示编辑面板
+		this.layuiOpen();
 	}
 }
 
