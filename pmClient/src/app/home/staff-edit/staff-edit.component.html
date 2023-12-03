@@ -1,5 +1,5 @@
-<div>
-  <div class="editModel" [hidden] = "showEdit" class="layui-anim layui-anim-fadein">
+<div id='editModel'>
+  <div class="editModel"  class="layui-anim layui-anim-fadein">
     <form action="" class="layui-form formMargin">
       <!-- 第一行 -->
       <div class="layui-row">
@@ -8,17 +8,17 @@
           <div class="layui-form-item">
             <label class="layui-form-label">姓名</label>
             <div class="layui-input-block">
-              <input type="text" name="title" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+              <input type="text" name="title" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input" [(ngModel)]="rowData.name">
             </div>
           </div>
         </div>
         <!-- 选择性别 -->
         <div class="layui-col-xs3">
-          <div class="layui-form-item">
+          <div class="layui-form-item" >
             <label class="layui-form-label">性别</label>
-            <div class="layui-input-block">
-              <input type="radio" name="sex"   value="男" title="男"  checked>
-              <input type="radio" name="sex"   value="女" title="女">
+            <div class="layui-input-block" >
+              <input type="radio" name="gender"   value="男"  title="男"  id='man'>
+              <input type="radio" name="gender"  value="女"  title="女"  id='women'>
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@
           <div class="layui-form-item">
             <label class="layui-form-label">出生日期</label>
             <div class="layui-input-block">
-              <input type="text" id="datainput" class="layui-input dateInput" placeholder="请选择出生日期" >
+              <input type="text" id="datainput" class="layui-input dateInput" placeholder="请选择出生日期" [(ngModel)]="rowData.birthday" name="birthday">
             </div>
           </div>
         </div>
@@ -53,13 +53,13 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">民族</label>
             <div class="layui-input-block">
-              <select name="" id="" lay-verify="required">
+              <select name="" id="" lay-verify="required" id="nationName">
                 <option value=""></option>
-                <option value="0">汉族</option>
-                <option value="1">苗族</option>
-                <option value="2">回族</option>
-                <option value="3">维吾尔族</option>
-                <option value="4">蒙古族</option>
+                <option value="汉族">汉族</option>
+                <option value="苗族">苗族</option>
+                <option value="回族">回族</option>
+                <option value="维吾尔族">维吾尔族</option>
+                <option value="蒙古族">蒙古族</option>
               </select>
             </div>
           </div>
@@ -69,7 +69,7 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">籍贯</label>
             <div class="layui-input-block">
-              <input type="text" placeholder="请输入籍贯" class="layui-input">
+              <input type="text" placeholder="请输入籍贯" class="layui-input" name="nativePlace" [(ngModel)]="rowData.nativePlace">
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">电子邮箱</label>
             <div class="layui-input-block">
-              <input type="text" placeholder="请输入电子邮箱" class="layui-input">
+              <input type="text" placeholder="请输入电子邮箱" class="layui-input" name="email" [(ngModel)]="rowData.email">
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">联系地址</label>
             <div class="layui-input-block">
-              <input type="text" placeholder="请输入联系地址" class="layui-input"/>
+              <input type="text" placeholder="请输入联系地址" class="layui-input" name="address" [(ngModel)]="rowData.address"/>
             </div>
           </div>
         </div>
@@ -138,7 +138,7 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">电话号码</label>
             <div class="layui-input-block">
-              <input type="tel" placeholder="请填写电话号码" class="layui-input"/>
+              <input type="tel" placeholder="请填写电话号码" class="layui-input" name="phone" [(ngModel)]="rowData.phone"/>
             </div>
           </div>
         </div>
@@ -150,22 +150,22 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">工号</label>
             <div class="layui-input-block">
-              <input type="text" placeholder="请填写工号" class="layui-input" disabled="disabled"/>
+              <input type="text" placeholder="请填写工号" class="layui-input" disabled="disabled" name="workID" [(ngModel)]="rowData.workID"/>
             </div>
           </div>
         </div>
         <!-- 学历 -->
         <div class="layui-col-xs3">
           <label for="" class="layui-form-label">学历</label>
-          <div class="layui-input-block">
-            <select name="" id="" lay-verify>
+          <div class="layui-input-block layui-form" >
+            <select name="" id="" lay-verify [(ngModel)]="rowData.tiptopDegree" name="tiptopDegree" id='tiptopDegree'>
               <option value=""></option>
-              <option value="0">博士</option>
-              <option value="1">硕士</option>
-              <option value="2">本科</option>
-              <option value="3">大专</option>
-              <option value="4">高中</option>
-              <option value="5">其他</option>
+              <option value="博士">博士</option>
+              <option value="硕士">硕士</option>
+              <option value="本科">本科</option>
+              <option value="大专" >大专</option>
+              <option value="高中">高中</option>
+              <option value="其他">其他</option>
             </select>
           </div>
         </div>
@@ -174,7 +174,7 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">毕业学校</label>
             <div class="layui-input-block">
-              <input type="text" placeholder="请输入毕业学校" class="layui-input"/>
+              <input type="text" placeholder="请输入毕业学校" class="layui-input" name="school" [(ngModel)]="rowData.school"/>
             </div>
           </div>
         </div>
@@ -183,7 +183,7 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">专业名称</label>
             <div class="layui-input-block">
-              <input type="text" placeholder="请输入专业名称" class="layui-input"/>
+              <input type="text" placeholder="请输入专业名称" class="layui-input" name="specialty" [(ngModel)]="rowData.specialty"/>
             </div>
           </div>
         </div>
@@ -195,7 +195,7 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">入职日期</label>
             <div class="layui-input-block">
-              <input type="text" id="dateinput" placeholder="请选择入职日期" class="layui-input dateInput"/>
+              <input type="text" id="dateinput" placeholder="请选择入职日期" class="layui-input dateInput" name="beginDate" [(ngModel)]="rowData.beginDate"/>
             </div>
           </div>
         </div>
@@ -204,7 +204,7 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">转正日期</label>
             <div class="layui-input-block">
-              <input type="text" class="layui-input dateInput" placeholder="请选择转正日期">
+              <input type="text" class="layui-input dateInput" placeholder="请选择转正日期" name="conversionTime" [(ngModel)]="rowData.conversionTime">
             </div>
           </div>
         </div>
@@ -213,7 +213,7 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">合同日期</label>
             <div class="layui-input-block">
-              <input type="text" class="layui-input dateInput" placeholder="请选择合同起始日期">
+              <input type="text" class="layui-input dateInput" placeholder="请选择合同起始日期" name="beginContract" [(ngModel)]="rowData.beginContract">
             </div>
           </div>
         </div>
@@ -222,7 +222,7 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">合同日期</label>
             <div class="layui-input-block">
-              <input type="text" class="layui-input dateInput" placeholder="请选择合同结束日期">
+              <input type="text" class="layui-input dateInput" placeholder="请选择合同结束日期" name="endContract" [(ngModel)]="rowData.endContract">
             </div>
           </div>
         </div>
@@ -234,7 +234,7 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">身份证号</label>
             <div class="layui-input-block">
-              <input type="text" class="layui-input" placeholder="请填写身份证号">
+              <input type="text" class="layui-input" placeholder="请填写身份证号" name="idCard" [(ngModel)]="rowData.idCard">
             </div>
           </div>
         </div>
@@ -243,8 +243,8 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">聘用形式</label>
             <div class="layui-input-block">
-              <input type="radio" name="type" value="劳动合同" title="劳动合同" checked>
-              <input type="radio" name="type" value="劳务合同" title="劳务合同">
+              <input type="radio" name="type" value="劳动合同" title="劳动合同" id='labor'>
+              <input type="radio" name="type" value="劳务合同" title="劳务合同" id="labour">
             </div>
           </div>
         </div>
@@ -253,9 +253,9 @@
           <div class="layui-form-item">
             <label for="" class="layui-form-label">婚姻状况</label>
             <div class="layui-input-block">
-              <input type="radio" name="wife" value="已婚" title="已婚" checked>
-              <input type="radio" name="wife" value="未婚" title="未婚">
-              <input type="radio" name="wife" value="离异" title="离异">
+              <input type="radio" name="wife" value="已婚" title="已婚" id="married">
+              <input type="radio" name="wife" value="未婚" title="未婚" id="spinsterhood">
+              <input type="radio" name="wife" value="离异" title="离异" id="divorced">
             </div>
           </div>
         </div>
